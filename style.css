@@ -1,0 +1,38 @@
+:root{
+      --offcanvas-width: 270px;
+      --topNavbarHeigth: 56px;
+}
+
+.sidebar-nav{
+      width: var(--offcanvas-width) !important;
+}
+
+.sidelink-nav{
+      display: flex !important;
+      align-items: center !important;
+}
+
+.sidelink-nav .rigth-icon{
+      display: inline-flex !important;
+}
+
+.sidelink-nav[aria-expanded="true"] .rigth-icon{
+      transform: rotate(180deg);
+      translate: all ease 0.25s !important;
+}
+
+main{
+      margin-left: var(--offcanvas-width);
+}
+
+@media(min-width: 720px){
+      body{
+            overflow: auto !important;
+      }
+      .sidebar-nav{
+            transform: none   !important;
+            visibility: visible !important;
+            top: var(--topNavbarHeigth) !important;
+            height: calc(100% - var(--topNavbarHeigth)) !important;
+      }
+}
